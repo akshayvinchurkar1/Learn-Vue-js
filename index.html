@@ -17,22 +17,27 @@
 		<![endif]-->
 	</head>
 	<body>
-		
+
 		<div class="container" id="app">
 			<div class="row">
-				<div class="col-md-3" id="foo" v-for="post in postlist" v-on:click="getthename">
+
+				<div class="col-md-3" v-for="post in postlist" v-on:click="getthename($event)" v-bind="post.ID">
 					<div class="card">
 						<div class="card-block">
 							<h3>{{post.name}}</h3>
-    						<p>{{post.title}}</p>
+    					<p>{{post.title}}</p>
 						</div>
 					</div>
 				</div>
+
 			</div>
 		</div>
 
 		<!-- jQuery -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+
 		<!-- Bootstrap JavaScript -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
 
